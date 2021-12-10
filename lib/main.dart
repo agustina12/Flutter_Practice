@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +18,8 @@ class MyApp extends StatelessWidget {
       // home: MyHomePage(title: 'Flutter Demo Home Page'),
       // home: HomePage(),
       // home: HomeworkAppBar(),
-      home: WhatsAppBar(),
+      // home: WhatsAppBar(),
+      home: WaBody(),
     );
   }
 }
@@ -62,11 +65,16 @@ class HomeworkAppBar extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Icon(Icons.menu_open),
-        title: Text("Homework AppBar"),
+        title: Column(
+          children: [
+            Text("Homework AppBar"),
+            Text("Textttt"),
+          ],
+        ),
         actions: [
           Container(
             margin: EdgeInsets.only(right: 14),
-            child: Column(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -128,6 +136,7 @@ class WhatsAppBar extends StatelessWidget {
           buildPage('Panggilan'),
         ]),
       
+      
     )
   );
   Widget buildPage(String text) => Center(
@@ -136,4 +145,223 @@ class WhatsAppBar extends StatelessWidget {
       style: TextStyle(fontSize: 26),
     ),
   );
+}
+
+class WaBody extends StatelessWidget {
+  const WaBody({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('WhatsApp'),
+        actions: [
+          Container(
+            margin: EdgeInsets.only(right: 10),
+            child: 
+            Row(
+              children: [
+                Icon(Icons.search_outlined),
+                Icon(Icons.more_vert),
+              ],
+            ),
+          ),
+        ],
+        backgroundColor: Colors.teal[700],
+      ),
+      body: Container(
+        height: 750,
+        child: ListView(
+          children: [
+            SizedBox(
+              height: 16,
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                radius: 30,
+                backgroundImage: NetworkImage("https://cdn.myanimelist.net/images/characters/13/409573.jpg")
+                ),
+                title: Text('Tanjiro', 
+                style: TextStyle(
+                fontSize: 16, 
+                fontWeight: FontWeight.bold,
+                height: 2),
+                ),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                  Text(
+                  'Karakter dianime demon slayer',
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                  ),
+                  Icon(Icons.check, size: 18, color: Colors.grey,),
+                  ],
+                ),
+                trailing: Text('09:00', 
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                ),
+                ),
+            ),
+            Divider(height: 30),
+            ListTile(
+              leading: CircleAvatar(
+                radius: 30,
+                backgroundImage: NetworkImage("https://cdn.myanimelist.net/images/characters/13/409573.jpg")
+                ),
+                title: Text('Tanjiro', 
+                style: TextStyle(
+                fontSize: 16, 
+                fontWeight: FontWeight.bold,
+                height: 2),
+                ),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                  Text(
+                  'Karakter dianime demon slayer',
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                  ),
+                  Icon(Icons.check, size: 18, color: Colors.grey,),
+                  ],
+                ),
+                trailing: Text('09:00', 
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                ),
+                ),
+            ),
+            Divider(height: 30),
+            ListTile(
+              leading: CircleAvatar(
+                radius: 30,
+                backgroundImage: NetworkImage("https://cdn.myanimelist.net/images/characters/13/409573.jpg")
+                ),
+                title: Text('Tanjiro', 
+                style: TextStyle(
+                fontSize: 16, 
+                fontWeight: FontWeight.bold,
+                height: 2),
+                ),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                  Text(
+                  'Karakter dianime demon slayer',
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                  ),
+                  Icon(Icons.check, size: 18, color: Colors.grey,),
+                  ],
+                ),
+                trailing: Text('09:00', 
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                ),
+                ),
+            ),
+            Divider(height: 30),
+            ListTile(
+              leading: CircleAvatar(
+                radius: 30,
+                backgroundImage: NetworkImage("https://cdn.myanimelist.net/images/characters/13/409573.jpg")
+                ),
+                title: Text('Tanjiro', 
+                style: TextStyle(
+                fontSize: 16, 
+                fontWeight: FontWeight.bold,
+                height: 2),
+                ),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                  Text(
+                  'Karakter dianime demon slayer',
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                  ),
+                  Icon(Icons.check, size: 18, color: Colors.grey,),
+                  ],
+                ),
+                trailing: Text('09:00', 
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                ),
+                ),
+            ),
+            Divider(height: 30),
+            ListTile(
+              leading: CircleAvatar(
+                radius: 30,
+                backgroundImage: NetworkImage("https://cdn.myanimelist.net/images/characters/13/409573.jpg")
+                ),
+                title: Text('Tanjiro', 
+                style: TextStyle(
+                fontSize: 16, 
+                fontWeight: FontWeight.bold,
+                height: 2),
+                ),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                  Text(
+                  'Karakter dianime demon slayer',
+                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                  ),
+                  Icon(Icons.check, size: 18, color: Colors.grey,),
+                  ],
+                ),
+                trailing: Text('09:00', 
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                ),
+                ),
+            ),
+            Divider(height: 30),
+            ListTile(
+              leading: CircleAvatar(
+                radius: 30,
+                backgroundImage: NetworkImage("https://cdn.myanimelist.net/images/characters/13/409573.jpg")
+                ),
+                title: Text('Tanjiro', 
+                style: TextStyle(
+                fontSize: 16, 
+                fontWeight: FontWeight.bold,
+                height: 2),
+                ),
+                subtitle: Row(
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      Text(
+                      'Karakter dianime demon slayer',
+                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                      ),
+                      Wrap(
+                        children: [
+                          Icon(Icons.check, size: 18, color: Colors.teal[700]),
+                          Icon(Icons.check, size: 18, color: Colors.teal[700]),
+                        ],
+                      )
+                      ],
+                    ),
+                  ],
+                ),
+                trailing: Text('09:00', 
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                ),
+                ),
+            ),
+            Divider(height: 30),
+          ],
+        ),
+      ),
+    );
+  }
 }
